@@ -14,4 +14,9 @@ export class AppController {
   async postUser(@Body() user: User): Promise<User[]>{
     return this.appService.createUser(user);
   }
+
+  @Get('users')
+  async getUsers(): Promise<User[]>{
+    return this.appService.getUsers();
+  }
 }
